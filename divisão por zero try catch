@@ -1,0 +1,13 @@
+try
+{
+    Console.WriteLine("Digite um numerador: ");
+int a = int.Parse(Console.ReadLine());
+Console.WriteLine("Digite um denominador: ");
+int b = int.Parse(Console.ReadLine());
+
+int divisao = (a / b);
+}
+catch (DivideByZeroException ex )
+{
+    Console.WriteLine($"Erro: na matemática não é permitida divisão por zero");
+}
