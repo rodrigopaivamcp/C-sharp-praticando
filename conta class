@@ -1,0 +1,14 @@
+
+class Conta
+{
+    public string titular { get; set; }
+    public int idConta { get; set; }
+    public double saldo { get; set; }
+    public int senha { get; set; }
+
+    public void ExibirFichaTecnica()
+    {
+        Console.WriteLine($"O titular da conta é {this.titular} e seu id é {this.idConta}");
+    }
+
+}
