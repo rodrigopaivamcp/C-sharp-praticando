@@ -1,0 +1,46 @@
+
+
+try
+{
+    
+    Console.WriteLine("Digite um número: ");
+    int a = int.Parse(Console.ReadLine());
+    Console.WriteLine("Digite outro número: ");
+    int b = int.Parse(Console.ReadLine());
+    
+    Console.WriteLine("Digite uma operação: (+), (-), (*), (/):  ");
+    string operacao = Console.ReadLine();
+
+    if (operacao == "+")
+    {
+        int soma = a + b;
+        Console.WriteLine($"A soma é de {soma} ");
+    }
+    else if (operacao == "-")
+    {
+        int subtracao = a - b;
+        Console.WriteLine($"A subtração é de {subtracao}");
+    }
+    else if (operacao == "*")
+    {
+        int multiplicacao = a * b;
+        Console.WriteLine($"A multiplicação é de {multiplicacao}");
+    }
+    else if (operacao == "/")
+    {
+        int divisao = a / b;
+        Console.WriteLine($"A divisão é de {divisao}");
+    }
+    else
+    {
+        Console.WriteLine("Operação inválida");
+    }
+}
+catch(DivideByZeroException ex)
+{
+    Console.WriteLine($"Erro: Divisão inválida: {ex.Message} ");
+}
+catch(FormatException ex)
+{
+    Console.WriteLine($"Erro: Entrada inválida: {ex.Message} ");
+}
