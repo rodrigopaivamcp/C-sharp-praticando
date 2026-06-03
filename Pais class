@@ -1,0 +1,23 @@
+using System.Text.Json.Serialization;
+namespace Paises;
+
+internal class Pais
+{
+    [JsonPropertyName("nome")]
+    public string Nome { get; set; }
+
+    [JsonPropertyName("capital")]
+    public string Capital { get; set; }
+
+    [JsonPropertyName("populacao")]
+    public int Populacao { get; set; }
+    
+    [JsonPropertyName("continente")]
+    public string Continente { get; set; }
+
+    [JsonPropertyName("idioma")]
+    public string Idioma { get; set; }
+
+    public string Informacoes => $" país: {Nome} | capital: {Capital} | população: {Populacao} | continente: {Continente} | idioma: {Idioma} ";
+}
+
